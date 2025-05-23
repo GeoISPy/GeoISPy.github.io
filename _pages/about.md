@@ -10,4 +10,4 @@ redirect_from:
 
 Personal website
 ======
-I am a second-year PhD student at the [School of Geodesy and Geomatics](https://esst.whu.edu.cn/), [Wuhan University](https://www.whu.edu.cn/). My major is Space Exploration and Information Processing Technology, and my research focuses on low-latitude ionosphere-thermosphere coupling.
+A second-year PhD student at the [School of Geodesy and Geomatics](https://esst.whu.edu.cn/), [Wuhan University](https://www.whu.edu.cn/). My major is Space Exploration and Information Processing Technology, and my research focuses on low-latitude ionosphere-thermosphere coupling.
