@@ -1,5 +1,5 @@
 ---
-oid:3
+id: "3"
 title: "Characteristics of equatorial electrojet derived from MSS1A observation: Initial result"
 collection: publications
 category: manuscripts
