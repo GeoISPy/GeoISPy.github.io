@@ -1,39 +1,20 @@
 {% include base_path %}
-
-{% comment %} 假设这是某个页面文件： publications_page.html {% endcomment %}
----
-title: Publications
----
-
-<h2>我的出版物列表</h2>
-
-{% comment %} 这里是您粘贴的包含调试信息和出版物列表的代码，它不在任何其他 for 循环内部 {% endcomment %}
-<p><strong>调试信息：</strong></p>
 {% assign sorted_pubs = site.publications | sort: "id" %}
-<p>sorted_pubs 中的条目数：<strong>{{ sorted_pubs.size }}</strong></p>
-<pre>完整的 sorted_pubs：{{ sorted_pubs | inspect }}</pre>
-<hr>
-
-{% if sorted_pubs and sorted_pubs.size > 0 %}
-  <ul>
-    {% for pub in sorted_pubs %}
-      <li>
-        <strong>ID: {{ pub.id }}</strong><br>
-        {% if pub.title %}
-          <em>{{ pub.title }}</em><br>
-        {% endif %}
-        {% if pub.citation and pub.citation_url %}
-          <p><a href="{{ pub.citation_url }}" target="_blank" rel="noopener">{{ pub.citation }}</a></p>
-        {% elsif pub.citation %}
-          <p>{{ pub.citation }}</p>
-        {% else %}
-          <p><em>无可用引用。</em></p>
-        {% endif %}
-      </li>
-    {% endfor %}
-  </ul>
-{% else %}
-  <p>没有可显示的出版物。</p>
+{{ pub.title }}
+<ul>
+  {% for pub in sorted_pubs %}
+    <li>
+      <strong>ID: {{ pub.id }}</strong><br>
+      {{ pub.title }}
+      <strong>{{ pub.id }}</strong><br>
+      {% if post.citation and post.citation_url %}
+        <p>
+          <a href="{{ post.citation_url }}" target="_blank" rel="noopener">{{ post.citation }}</a>
+        </p>
+      {% elsif post.citation %}
+  <p>{{ post.citation }}</p>
 {% endif %}
+    </li>
+  {% endfor %}
+</ul>
 
-<p>列表到底了。</p>
