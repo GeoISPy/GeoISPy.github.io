@@ -1,18 +1,41 @@
 {% include base_path %}
+
+{% comment %}
+  假设 'site.publications' 是您的出版物数据集合。
+  并且每个出版物都有 'id', 'title', 'citation' 字段，以及可选的 'citation_url' 字段。
+  'sort: "id"' 将按 'id' 字段进行字母顺序排序。
+  如果 'id' 是数字且您希望进行数字排序（例如 1, 2, 10 而不是 1, 10, 2），
+  请确保 ID 作为数字存储，或者如果是字符串，则进行填充（例如 "01", "02", "10"）。
+  或者，如果 'id' 不是期望的排序键，请按不同的字段排序（例如，按 'date' 降序）。
+{% endcomment %}
 {% assign sorted_pubs = site.publications | sort: "id" %}
-{{ pub.title }}
-<ul>
-  {% for pub in sorted_pubs %}
-    <li>
-      <strong>{{ pub.id }}</strong><br>
-      {% if post.citation and post.citation_url %}
-        <p>
-          <a href="{{ post.citation_url }}" target="_blank" rel="noopener">{{ post.citation }}</a>
-        </p>
-      {% elsif post.citation %}
-  <p>{{ post.citation }}</p>
+
+{% comment %} 您可以在这里添加一个列表的总标题，如果需要的话 {% endcomment %}
+{% comment %} 例如: <h2>Publications</h2> {% endcomment %}
+
+{% if sorted_pubs and sorted_pubs.size > 0 %}
+  <ul>
+    {% for pub in sorted_pubs %}
+      <li>
+        <strong>ID: {{ pub.id }}</strong><br>
+        {% if pub.title %}
+          <em>{{ pub.title }}</em><br>
+        {% endif %}
+
+        {% if pub.citation and pub.citation_url %}
+          <p>
+            <a href="{{ pub.citation_url }}" target="_blank" rel="noopener">{{ pub.citation }}</a>
+          </p>
+        {% elsif pub.citation %}
+          <p>{{ pub.citation }}</p>
+        {% else %}
+          {% comment %} 可选：处理没有引用的情况 {% endcomment %}
+          <p><em>No citation available.</em></p>
+        {% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+{% else %}
+  <p>No publications to display.</p>
 {% endif %}
-    </li>
-  {% endfor %}
-</ul>
 
