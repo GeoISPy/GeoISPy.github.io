@@ -1,22 +1,30 @@
 {% include base_path %}
 
+<p><strong>DEBUGGING INFO:</strong></p>
+<p>Number of items in site.publications: <strong>{{ site.publications.size }}</strong></p>
+<p>Content of site.publications (first item ID if exists): {{ site.publications.first.id }}</p>
+<pre>Full site.publications: {{ site.publications | inspect }}</pre>
+
 {% assign sorted_pubs = site.publications | sort: "id" %}
 
+<p>Number of items in sorted_pubs: <strong>{{ sorted_pubs.size }}</strong></p>
+<p>Content of sorted_pubs (first item ID if exists): {{ sorted_pubs.first.id }}</p>
+<pre>Full sorted_pubs: {{ sorted_pubs | inspect }}</pre>
+<hr>
+
+{% comment %} Your existing loop code should start after this debug block {% endcomment %}
 {% if sorted_pubs and sorted_pubs.size > 0 %}
   <ul>
-    {% for pub in sorted_pubs %} (*-- 仍然循环3次 --*)
+    {% for pub in sorted_pubs %}
       <li>
-        <strong>ID: {{ pub.id }}</strong><br> (*-- PubA的ID, 然后PubB的ID, 然后PubC的ID --*)
+        <strong>ID: {{ pub.id }}</strong><br>
         {% if pub.title %}
-          <em>{{ pub.title }}</em><br> (*-- PubA的Title, 然后PubB的Title, ... --*)
+          <em>{{ pub.title }}</em><br>
         {% endif %}
-
-        {% if pub.citation and pub.citation_url %} (*-- 现在使用 pub.citation --*)
-          <p>
-            <a href="{{ pub.citation_url }}" target="_blank" rel="noopener">{{ pub.citation }}</a> (*-- PubA的Citation, 然后PubB的Citation, ... --*)
-          </p>
+        {% if pub.citation and pub.citation_url %}
+          <p><a href="{{ pub.citation_url }}" target="_blank" rel="noopener">{{ pub.citation }}</a></p>
         {% elsif pub.citation %}
-          <p>{{ pub.citation }}</p> (*-- PubA的Citation, 然后PubB的Citation, ... --*)
+          <p>{{ pub.citation }}</p>
         {% else %}
           <p><em>No citation available.</em></p>
         {% endif %}
