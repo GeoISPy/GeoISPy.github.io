@@ -1,18 +1,19 @@
 {% include base_path %}
 
-<p><strong>DEBUGGING INFO:</strong></p>
-<p>Number of items in site.publications: <strong>{{ site.publications.size }}</strong></p>
-<p>Content of site.publications (first item ID if exists): {{ site.publications.first.id }}</p>
-<pre>Full site.publications: {{ site.publications | inspect }}</pre>
+{% comment %} 假设这是某个页面文件： publications_page.html {% endcomment %}
+---
+title: Publications
+---
 
+<h2>我的出版物列表</h2>
+
+{% comment %} 这里是您粘贴的包含调试信息和出版物列表的代码，它不在任何其他 for 循环内部 {% endcomment %}
+<p><strong>调试信息：</strong></p>
 {% assign sorted_pubs = site.publications | sort: "id" %}
-
-<p>Number of items in sorted_pubs: <strong>{{ sorted_pubs.size }}</strong></p>
-<p>Content of sorted_pubs (first item ID if exists): {{ sorted_pubs.first.id }}</p>
-<pre>Full sorted_pubs: {{ sorted_pubs | inspect }}</pre>
+<p>sorted_pubs 中的条目数：<strong>{{ sorted_pubs.size }}</strong></p>
+<pre>完整的 sorted_pubs：{{ sorted_pubs | inspect }}</pre>
 <hr>
 
-{% comment %} Your existing loop code should start after this debug block {% endcomment %}
 {% if sorted_pubs and sorted_pubs.size > 0 %}
   <ul>
     {% for pub in sorted_pubs %}
@@ -26,11 +27,13 @@
         {% elsif pub.citation %}
           <p>{{ pub.citation }}</p>
         {% else %}
-          <p><em>No citation available.</em></p>
+          <p><em>无可用引用。</em></p>
         {% endif %}
       </li>
     {% endfor %}
   </ul>
 {% else %}
-  <p>No publications to display.</p>
+  <p>没有可显示的出版物。</p>
 {% endif %}
+
+<p>列表到底了。</p>
