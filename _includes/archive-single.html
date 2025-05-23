@@ -1,9 +1,18 @@
 {% include base_path %}
-
-{% if post.citation and post.citation_url %}
-  <p>
-    <a href="{{ post.citation_url }}" target="_blank" rel="noopener">{{ post.citation }}</a>
-  </p>
-{% elsif post.citation %}
+{% assign sorted_pubs = site.publications | sort: "id" %}
+<ul>
+  {% for pub in sorted_pubs %}
+    <li>
+      <strong>ID: {{ pub.id }}</strong><br>
+      {{ pub.title }}
+      {% if post.citation and post.citation_url %}
+        <p>
+          <a href="{{ post.citation_url }}" target="_blank" rel="noopener">{{ post.citation }}</a>
+        </p>
+      {% elsif post.citation %}
   <p>{{ post.citation }}</p>
 {% endif %}
+    </li>
+  {% endfor %}
+</ul>
+
