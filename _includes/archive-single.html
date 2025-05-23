@@ -1,9 +1,7 @@
 {% include base_path %}
-{% if post.citation and post.citation_url %}
+{% if post.citation %}
   <p>
-    <a href="{{ post.citation_url }}" target="_blank" rel="noopener">{{ post.citation }}</a>
+    <p>{{ post.citation }}</p>
   </p>
-{% elsif post.citation %}
-  <p>{{ post.citation }}</p>
 {% endif %}
 
