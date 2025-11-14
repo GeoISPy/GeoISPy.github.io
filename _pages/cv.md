@@ -20,14 +20,10 @@ Work experience
   * South Korea Astronomy and Space Science Institute
   * Supervisor: Jaeheung Park
   
-Skills
+Products
 ======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+* 画图颜色记录、制作色卡和调用工具[https://github.com/GeoISPy/Record-colors-used-in-paper-plots](https://github.com/GeoISPy/Record-colors-used-in-paper-plots)
+* 地磁计算工具[https://github.com/GeoISPy/magnetic_coordinate_calculator](https://github.com/GeoISPy/magnetic_coordinate_calculator)
 
 Publications
 ======
