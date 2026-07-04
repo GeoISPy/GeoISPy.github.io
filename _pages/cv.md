@@ -12,19 +12,19 @@ redirect_from:
 Appointments
 =======
 
-**Postdoctoral Researcher**, 2026–Present
+* **Postdoctoral Researcher**, 2026–Present
 
-*School of Earth and Space Science and Technology, Wuhan University*
+  * *School of Earth and Space Science and Technology, Wuhan University*
 
-Supervisor: Chao Xiong
+  * Supervisor: Chao Xiong
 
 
 
-**Academic Collaborator**, 2025
+* **Academic Collaborator**, 2025
 
-*Korea Astronomy and Space Science Institute (KASI)*
+  * *Korea Astronomy and Space Science Institute (KASI)*
 
-Supervisor: Jaeheung Park
+  * Supervisor: Jaeheung Park
 
 
 
