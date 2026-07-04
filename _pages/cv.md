@@ -8,10 +8,23 @@ redirect_from:
 ---
 
 {% include base_path %}
+Appointments
+=======
+2026–Present
+Postdoctoral Researcher
+School of Earth and Space Science and Technology
+Wuhan University
+
+2025
+Academic Collaborator
+Korea Astronomy and Space Science Institute
+Supervisor: Jaeheung Park
+
+
 
 Education
 ======
-* Ph.D in Wuhan University, 2026 (expected)
+* Ph.D in Wuhan University, 2026
 * B.S. in East China Normal University, 2020
 
 Work experience
