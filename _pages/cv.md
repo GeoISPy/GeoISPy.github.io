@@ -11,15 +11,14 @@ redirect_from:
 
 Appointments
 =======
-2026–Present
-Postdoctoral Researcher
-School of Earth and Space Science and Technology
-Wuhan University
 
-2025
-Academic Collaborator
-Korea Astronomy and Space Science Institute
+**Postdoctoral Researcher**, 2026–Present
+*School of Earth and Space Science and Technology, Wuhan University*
+
+**Academic Collaborator**, 2025
+*Korea Astronomy and Space Science Institute (KASI)*
 Supervisor: Jaeheung Park
+
 
 
 
