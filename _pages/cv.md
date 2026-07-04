@@ -30,8 +30,6 @@ Appointments
 
   * Volunteer Service in Xinjiang, China
 
-
-
 Education
 ======
 * Ph.D in Wuhan University, Sep. 2021 - Jun. 2026
