@@ -18,21 +18,24 @@ Appointments
 
   * Supervisor: Chao Xiong
 
-
-
-* **Academic Collaborator**, Apr. ~ Sep. 2025
+* **Academic Collaborator**, Apr. - Sep. 2025
 
   * *Korea Astronomy and Space Science Institute (KASI)*
 
   * Supervisor: Jaeheung Park
 
+* **Volunteer**, Apr. 2020 – Jul. 2021
+
+  * *Chinese College Students' Volunteer Service Program for Western China*
+
+  * Volunteer Service in Xinjiang, China
 
 
 
 Education
 ======
-* Ph.D in Wuhan University, 2026
-* B.S. in East China Normal University, 2020
+* Ph.D in Wuhan University, Sep. 2021 - Jun. 2026
+* B.S. in East China Normal University, Sep. 2016 - Jun. 2020
   
 Products
 ======
