@@ -20,7 +20,7 @@ Appointments
 
 
 
-* **Academic Collaborator**, 2025
+* **Academic Collaborator**, Apr. ~ Sep. 2025
 
   * *Korea Astronomy and Space Science Institute (KASI)*
 
@@ -33,12 +33,6 @@ Education
 ======
 * Ph.D in Wuhan University, 2026
 * B.S. in East China Normal University, 2020
-
-Work experience
-======
-* Apr. ~ Sep. 2025: Academic Collaborator
-  * South Korea Astronomy and Space Science Institute
-  * Supervisor: Jaeheung Park
   
 Products
 ======
